@@ -1,0 +1,23 @@
+Explore the Twitter API
+
+Consider options for using Python to access and abuse the Twitter API for my own, greedy, nasty, open-source poet porpoises.
+
+	- Which module seems best for this project? There are a few python/twitter modules.
+
+Decide whether to write an algorithm to determine syllable length (probably not) or feed the program sets of words with associated syllable count (more likely)
+	Or find someone else who's done it, and assuming the source is open, crib that shit, and give credit to the programmer.
+
+Write code to snag Tweets.
+
+Write code to parse the snagged Tweets.
+
+Write code to select appropriate words from the parsed, snagged, Tweets.
+
+Use Oxford commas. They're good for you.
+
+Write code to exclude dumb, non-sexy words, like articles, some prepositions.
+	This is to increase the all-important muscle-to-word density factor. (Name subject to change). Though it's impossible to qualify poetry, we can leave out shitty words that add nothing to the poem.
+	We want our haiku to be muscular, concise. We don't need words like 'the', 'and', 'because', etc.
+	We want a list of absolutely-not's, probably-not's, and sparing (like sweets).
+
+	
