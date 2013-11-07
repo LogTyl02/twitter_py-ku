@@ -1,0 +1,6 @@
+Lists of words to watch for, or are ambiguous:
+
+Reason - 2 syllables
+Useful - 2 syllables
+
+Field - Ambiguous, either 1 or 2 syllables

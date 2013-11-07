@@ -14,16 +14,16 @@ access_token_secret="u3BbVM2tOi01ZDVx76djk7AUj0AdHGrA7cXDNeqbNMx9N"
 
 class StdOutListener(StreamListener):	
 
-	#def on_data(self, data):
+	def on_data(self, data):
 		print data['text']
 		json.dumps(data['text'], f)
 		return False
 
-	def on_status(self, status):
+	#def on_status(self, status):
 		print status
 		return False
 
-	def on_error(self, status):
+	#def on_error(self, status):
 		print 'error ' + str(status)
 		return False
 
