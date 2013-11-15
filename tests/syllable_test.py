@@ -35,3 +35,7 @@ def CountSyllables(word, isName=True):
         numVowels -= 1
 
     return numVowels
+
+print CountSyllables('Crunchy')
+print CountSyllables('Bacon')
+print CountSyllables('Jitterbug')
