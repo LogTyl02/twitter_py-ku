@@ -1,0 +1,12 @@
+
+
+-- 15 November, 2013:
+	- Added readme
+	- Updated proposal
+	- No blank lines in test poem generation (woohoo!)
+	- can snag incoming tweets, but ratelimited. Need to find a way to only pull a couple at a time
+
+	:: To do~!
+			JSON! Parse, save, etc.
+			Figure out rate limit stuff for twitter
+			Do syllable stuff
