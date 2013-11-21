@@ -1,11 +1,26 @@
 class FileHandler():
-	def __init__(self, filename):
-		self.contents = open(filename, 'r+')
+	def __init__(self, input_file, input_mode, output_file, output_mode):
+		self.input_file = input_file
+		self.input_mode = input_mode
+		self.output_file= output_file
+		self.output_mode= output_mode
 
-	def dump(self):
-		for line in self.contents:
-			print line
+		self.input_contents = open(str(self.input_file), str(self.input_mode))
+		self.output_contents= open(str(self.output_file), str(self.output_mode))
 
-poem = FileHandler('poem.txt')
+	def dump_input_contents(self):
+		if self.output_mode == 'r' or 'r+':
+			print self.input_contents.readlines()
+		else:
+			print 'File not open in reading mode!'
 
-poem.dump()
+	def dump_output_contents(self):
+		if self.output_mode == 'r' or 'r+':
+			print self.output_contents.readlines()
+		else:
+			print 'File not open in reading mode!'
+
+	def write_out(self, raw_lines):
+		for i in raw_lines:
+			if i != '\n':
+				self.output_contents.write(i)
