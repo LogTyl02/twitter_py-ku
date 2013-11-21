@@ -20,7 +20,7 @@ def search_dictionary(word):
 def count_phonemes(line):
     phoneme_count = 0
     for phoneme in line.split():
-        if len(phoneme) == 2 and 'J' not in phoneme:
+        if len(phoneme) == 2 and phoneme != 'JH' and phoneme != 'SH' and phoneme != 'DH':
             phoneme_count += 1
             
     return phoneme_count
