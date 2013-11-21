@@ -19,10 +19,15 @@ class StdOutListener(StreamListener):
 
 	def on_data(self, raw_data):
 		data = json.loads(raw_data)
-		print type(data)
-		print data
-		print data['text']
-
+		#print data
+		if len(data) < 23:
+			print 'Donk'
+			stream.disconnect()
+		else:
+			if data['lang'] == 'en':
+				print data['text']
+			else:
+				print 'Nope'
 		stream.disconnect()
 
 	def on_status(self, status):
@@ -41,6 +46,7 @@ if __name__ == '__main__':
 	auth.set_access_token(access_token, access_token_secret)
 	
  	stream = Stream(auth, l)
-	#stream.filter(track=['winter'])
-
+	#stream.filter(track=['bunny'])
+	stream.disconnect()
 	stream.sample()
+	stream.disconnect()
