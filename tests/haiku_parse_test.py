@@ -15,6 +15,3 @@ for line in parse_fodder:
         for i in words:
             if i != '\n':
                 print i.rstrip(str(strip_list)) + ' ' + str(CountSyllables(i))
-                
-        
-        

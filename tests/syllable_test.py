@@ -31,11 +31,9 @@ def CountSyllables(word, isName=True):
         numVowels -= 1
 
     #remove silent single e, but not ee since it counted it before and we should be correct
-    elif len(currentWord) > 2 and currentWord[-1:] == "e" and currentWord[-2:] != "ee":
+    elif len(currentWord) > 2 and currentWord[-1:] == "e" and currentWord[-2:] != "ee" and currentWord[-2:] !="he":
         numVowels -= 1
 
     return numVowels
-
-print CountSyllables('Crunchy')
-print CountSyllables('Bacon')
-print CountSyllables('Jitterbug')
+    
+print CountSyllables('Melodious')
