@@ -18,9 +18,10 @@ def search_dictionary(word):
                 return line.strip()
                 
 def count_phonemes(line):
+    vowels = ['A','E','I','O','U']
     phoneme_count = 0
     for phoneme in line.split():
-        if len(phoneme) == 2 and phoneme != 'JH' and phoneme != 'SH' and phoneme != 'DH':
+        if len(phoneme) == 2 and phoneme[0] in vowels:
             phoneme_count += 1
             
     return phoneme_count
