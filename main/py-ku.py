@@ -12,11 +12,13 @@ consumer_secret="sAeXGJyCRbPEGZMe8uIUNHXJiy7W2b8TApjSbowODc"
 access_token="2171077380-mE6EhzcahlDkwA4aPsIgpBkVd1YbG6Wqlu8S1Ja"
 access_token_secret="u3BbVM2tOi01ZDVx76djk7AUj0AdHGrA7cXDNeqbNMx9N"
 
+
+
+
 class StdOutListener(StreamListener):	
 
 	def on_data(self, data):
 		print data['text']
-		json.dumps(data['text'], f)
 		return False
 
 	#def on_status(self, status):
