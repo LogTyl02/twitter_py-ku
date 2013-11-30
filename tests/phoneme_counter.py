@@ -27,7 +27,7 @@ def count_phonemes(line):
     return phoneme_count
                 
 
-inputizer = WordInput(sys.argv[1])
-snag = search_dictionary(inputizer.get_word_input())
-print snag
-print 'Number of relevant phonemes:', count_phonemes(snag)
+#inputizer = WordInput(sys.argv[1])
+#snag = search_dictionary(inputizer.get_word_input())
+#print snag
+#print 'Number of relevant phonemes:', count_phonemes(snag)

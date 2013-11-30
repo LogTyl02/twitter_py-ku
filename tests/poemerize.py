@@ -1,4 +1,5 @@
 from syllable_test import *
+from phoneme_counter import *
 
 class FileHandler():
 	def __init__(self, input_file, input_mode, output_file, output_mode):
@@ -45,7 +46,7 @@ class Poemerizer(object):
         
     def obliterate(self, line_list):
 	self.words = str(line_list[0]).split()
-	obliteration = [{'Word: ':w.upper(), 'Length: ':len(w), 'Syllables: ':CountSyllables(w)} for w in self.words]
+	obliteration = [{'Word: ':w.upper(), 'Length: ':len(w), 'Syllables: ':count_phonemes(w)} for w in self.words]
 
 	return obliteration
 
