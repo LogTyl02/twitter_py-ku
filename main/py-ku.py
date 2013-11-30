@@ -1,6 +1,7 @@
 import json
 import tempfile
-
+import os
+import sys
 from file_handler import *
 
 from tweepy import OAuthHandler
@@ -25,7 +26,8 @@ class StdOutListener(StreamListener):
 			stream.disconnect()
 		else:
 			if data['lang'] == 'en':
-				print data['text']
+				print data['text'].encode('utf-8')
+				fout.write(data['text'].encode('utf-8'))
 			else:
 				print 'Nope'
 		stream.disconnect()
@@ -39,7 +41,7 @@ class StdOutListener(StreamListener):
 
 
 if __name__ == '__main__':
-	output_handler = FileHandler('poem.txt', 'r', 'output.txt', 'r+') 		# Making an object to deal with file i/o
+	fo = open( os.path.join('data', 'tweets.txt'), 'r+' )
 
 	l = StdOutListener()
 	auth = OAuthHandler(consumer_key, consumer_secret)
