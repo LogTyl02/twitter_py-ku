@@ -12,6 +12,7 @@ class Ambiguous(object):
 			print self.word, 'is hyphenated'
 			print 'Attempting to split hyphenated word...'
 			self.hyphen_two(self.word)
+			# Now stick that back into the line
 		else:
 			print self.word, 'is not hyphenated'
 			self.is_hyphenated = False
