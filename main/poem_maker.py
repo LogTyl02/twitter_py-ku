@@ -36,7 +36,7 @@ class GruntWork(object):
 		self.packedLines = [x.strip(',.!').lower() for word in self.makeNaked() for x in word]		# This is some serious list comprehension shenanigans, and I love it.
 		return self.packedLines
 
-	def countSyllables(self, pack):
+	def countSyllables(self, pack):               # THIS DOES NOTHING YET. 
 		self.pack = pack
 		for line in f.syllable_dictionary:
 			for i in self.packLines():
@@ -52,10 +52,13 @@ grunt = GruntWork(f.grist)
 
 a = grunt.packLines()
 
-bob = 'Apple'
-
 for i in a:
-	print search_dictionary(i.strip())
+	if i != None:		# Testing
+		print i, count_phonemes(search_dictionary(i.strip()))	# These functions are part of the phoneme_counter file.
+		pdic.seek(0)	# This trick sets the pointer back at the beginning of the file so it can search through it again.
+	else:
+		pdic.seek(0)
+		continue
 
 
 
