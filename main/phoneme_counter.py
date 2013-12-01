@@ -31,3 +31,4 @@ def count_phonemes(line):
 #snag = search_dictionary(inputizer.get_word_input())
 #print snag
 #print 'Number of relevant phonemes:', count_phonemes(snag)
+

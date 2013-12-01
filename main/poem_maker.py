@@ -3,6 +3,7 @@
 
 import os
 import sys
+from phoneme_counter import *
 
 class FileHandler( object ):
 	def __init__(self, lookupFile, gristFile, newPoemFile ):		# gristFile is the raw data we will process into beautiful poem things
@@ -51,13 +52,13 @@ grunt = GruntWork(f.grist)
 
 a = grunt.packLines()
 
-#for line in f.syllable_dictionary:
-#	for word in a:
-#		if word.upper() in line:
-#			print line
+bob = 'Apple'
 
-b = f.syllable_dictionary
+for i in a:
+	print search_dictionary(i.strip())
 
-for line in b:
-	for word in line.split():
-		print word[0]
+
+
+
+
+
