@@ -6,3 +6,4 @@ inputizer = WordInput(sys.argv[1])
 snag = search_dictionary(inputizer.get_word_input())
 print snag
 print 'Number of relevant phonemes:', count_phonemes(snag)
+
