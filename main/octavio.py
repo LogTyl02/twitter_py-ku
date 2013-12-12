@@ -33,7 +33,33 @@ class Grist(object):
 
 	def build_poem(self, lines=3):
 		for i in range(lines):
-			print random.choice(self.raw_data)
+			print self.build_complex_line()
+
+        def build_complex_line(self):
+            seed = random.choice(self.raw_data)
+            flower = random.choice(self.raw_data)
+            seed = seed.split()
+            seed[-1] = flower.split()[-1]
+            return ' '.join(seed)
+
+        def rend_fluff(self):
+            fluffy_line = random.choice(self.raw_data).split()
+            strong_line = []
+            for word in fluffy_line:
+                if word == 'the' or word == 'The':
+                    fluffy_line.remove(word)
+            return fluffy_line
+                
+        def clean_singleton(self, line):
+            pass
+
+        def last_three(self, line):
+            if len(line) >=3:
+                phrase = [line[-1], line[-2], line[-3]]
+            else:
+                phrase = line
+            return phrase
+                
 
 	def prime_poem(self, lines=3):
 		self.pp = []
@@ -76,6 +102,12 @@ def count_em_all():
 		print word, "has", count_phonemes(search_dictionary(word)), "syllables!"
 		pdic.seek(0)
 
-print octavio.prime_poem(2)	# Builds a poem using only lines that have a prime number of chars
+#octavio.build_poem(3)
+
+
+#print octavio.rend_fluff()
+#print octavio.last_three(octavio.rend_fluff())
+
+octavio.prime_poem(5)	# Builds a poem using only lines that have a prime number of chars
 
 # count_em_all()			# Returns syllable counts for every word
